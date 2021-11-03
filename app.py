@@ -19,7 +19,7 @@ from io import BytesIO
 st.set_option('deprecation.showfileUploaderEncoding', False) # to avoid warnings while uploading files
 # st.title("Monument Image Classifier")
 # Here we will use st.cache so that we would load the model only once and store it in the cache memory which will avoid re-loading of model again and again.
-@st.cache(allow_output_mutation=True)
+# @st.cache(allow_output_mutation=True)
 def load_model():
   model=tf.keras.models.load_model('my_model4.hdf5')
   return model
@@ -74,22 +74,23 @@ def main():
     file = st.file_uploader("Please upload an image", type=["jpg", "png"])
     result=""
     if st.button("Predict"):
-#         result=import_and_predict(variance,skewness,curtosis,entropy)
-        if file is None:
-          st.text("Please upload an image file")
-        else:
+#         if file is None:
+#           st.text("Please upload an image file")
+#         else:
           image = Image.open(file)
           st.image(image, use_column_width=True)
           predictions = import_and_predict(image,model)
           score = tf.nn.softmax(predictions[0])
 #           st.write(predictions)
-          # st.write(score)
-          st.write(
-          "This image most likely belongs to {}."
-          .format(class_names[np.argmax(score)])
-          st.success('The output is {}'.format(result))
+#           st.write(score)
+#           st.write(
+#           "This image most likely belongs to {}."
+#           .format(class_names[np.argmax(score)])
+           result=class_names[np.argmax(score)
+           st.success('The output is {}'.format(result))
     if st.button("About"):
         st.text("Lets LEarn")
         st.text("Built with Streamlit")
+                             
 if __name__=='__main__':
     main()
