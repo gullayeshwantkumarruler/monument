@@ -4,5 +4,3 @@ Pillow
 opencv-python
 pandas
 numpy
-io
-requests
