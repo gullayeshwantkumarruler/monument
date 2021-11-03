@@ -1,14 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on 3-11-2021
-@author: Greatlearning
-"""
-
-# -*- coding: utf-8 -*-
-"""
-Created on 3-11-2021
-@author: Greatlearning
-"""
 import streamlit as st
 # import tensorflow as tf
 import cv2
