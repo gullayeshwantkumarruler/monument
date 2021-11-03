@@ -49,7 +49,7 @@ def main():
         predictions = import_and_predict(image,model)
         score = softmax(predictions[0])
         result= class_names[np.argmax(score)
-    st.write('The output is {}'.format(result))
+        st.write('The output is {}'.format(result))
     if st.button("About"):
        st.text("Lets LEarn")
        st.text("Built with Streamlit")
