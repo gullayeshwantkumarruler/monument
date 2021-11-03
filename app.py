@@ -17,7 +17,7 @@ import numpy as np
 import requests
 from io import BytesIO
 st.set_option('deprecation.showfileUploaderEncoding', False) # to avoid warnings while uploading files
-# st.title("Monument Image Classifier")
+
 # Here we will use st.cache so that we would load the model only once and store it in the cache memory which will avoid re-loading of model again and again.
 # @st.cache(allow_output_mutation=True)
 def load_model():
@@ -27,14 +27,6 @@ def load_model():
 # load and store the model
 with st.spinner('Model is being loaded..'):
   model=load_model()
-
-
-# upload the image
-# file = st.file_uploader("Please upload an image", type=["jpg", "png"])
-class_names=['Angkor_wat','Buckingham_Palace','Burj_khalifa','Christ_the_Redeemer','Gateway_of_India','Niagara_Falls','Tajmahal','The_Eiffel_Tower','The_Great_Wall_of_China','The_Sydney_Opera_House']
-
-
-
 
 # Function for prediction
 def import_and_predict(image_data, model):
@@ -46,51 +38,30 @@ def import_and_predict(image_data, model):
         img_reshape = img[np.newaxis,...]
         prediction = model.predict(img_reshape)
         return prediction
-
-
-
-
-   
 def main():
-    st.title("Monument Image Classifier")
-    html_temp = """
-    <div style="background-color:tomato;padding:10px">
-    <h2 style="color:white;text-align:center;">Monument Image Classifier App </h2>
-    </div>
-    """
-    st.markdown(html_temp,unsafe_allow_html=True)
-#     if file is None:
-#       st.text("Please upload an image file")
-#     else:
-#       image = Image.open(file)
-#       st.image(image, use_column_width=True)
-#       predictions = import_and_predict(image,model)
-#       score = tf.nn.softmax(predictions[0])
-#       st.write(predictions)
-#       # st.write(score)
-#       st.write(
-#       "This image most likely belongs to {}."
-#       .format(class_names[np.argmax(score)]))
-    file = st.file_uploader("Please upload an image", type=["jpg", "png"])
-    result=""
-    if st.button("Predict"):
-#         if file is None:
-#           st.text("Please upload an image file")
-#         else:
-          image = Image.open(file)
-          st.image(image, use_column_width=True)
-          predictions = import_and_predict(image,model)
-          score = tf.nn.softmax(predictions[0])
-#           st.write(predictions)
-#           st.write(score)
-#           st.write(
-#           "This image most likely belongs to {}."
-#           .format(class_names[np.argmax(score)])
-           result=class_names[np.argmax(score)
-           st.success('The output is {}'.format(result))
-    if st.button("About"):
-        st.text("Lets LEarn")
-        st.text("Built with Streamlit")
-                             
+      st.title("Monument Image Classifier")
+      html_temp = """
+      <div style="background-color:tomato;padding:10px">
+      <h2 style="color:white;text-align:center;">Monument Image Classifier App </h2>
+      </div>
+      """
+      st.markdown(html_temp,unsafe_allow_html=True)
+      file = st.file_uploader("Please upload an image", type=["jpg", "png"])
+      class_names=['Angkor_wat','Buckingham_Palace','Burj_khalifa','Christ_the_Redeemer','Gateway_of_India','Niagara_Falls','Tajmahal','The_Eiffel_Tower','The_Great_Wall_of_China','The_Sydney_Opera_House']
+      result=""
+      if st.button("Predict"):
+  #         if file is None:
+  #           st.text("Please upload an image file")
+  #         else:
+            image = Image.open(file)
+            st.image(image, use_column_width=True)
+            predictions = import_and_predict(image,model)
+            score = tf.nn.softmax(predictions[0])
+            result=class_names[np.argmax(score)
+       st.success('The output is {}'.format(result))
+       if st.button("About"):
+          st.text("Lets LEarn")
+          st.text("Built with Streamlit")
+
 if __name__=='__main__':
     main()
