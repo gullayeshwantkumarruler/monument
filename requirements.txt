@@ -4,3 +4,4 @@ Pillow==7.1.2
 opencv-python-headless
 pandas==1.1.5
 numpy==1.19.5
+opencv-contrib-python
