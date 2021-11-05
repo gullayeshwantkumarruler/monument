@@ -1,19 +1,15 @@
 import streamlit as st
-# import tensorflow as tf
+import tensorflow as tf
 import cv2
 from PIL import Image, ImageOps
 import numpy as np
-import requests
-from io import BytesIO
-from tensorflow.keras.models import load_model
-from tensorflow.nn import softmax
 from tensorflow.keras.preprocessing import image
 st.set_option('deprecation.showfileUploaderEncoding', False) # to avoid warnings while uploading files
 
 # Here we will use st.cache so that we would load the model only once and store it in the cache memory which will avoid re-loading of model again and again.
 @st.cache(allow_output_mutation=True)
 def load_model():
-  model=load_model('my_model4.hdf5')
+  model=tf.keras.models.load_model('my_model4.hdf5')
   return model
 
 # load and store the model
@@ -47,7 +43,7 @@ def main():
         image = Image.open(file)
         st.image(image, use_column_width=True)
         predictions = import_and_predict(image,model)
-        score = softmax(predictions[0])
+        score = tf.nn.softmax(predictions[0])
         result= class_names[np.argmax(score)]
     st.write('The output is {}'.format(result))
     if st.button("About"):
