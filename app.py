@@ -16,9 +16,7 @@ def load_model():
 # load and store the model
 with st.spinner('Model is being loaded..'):
   model=load_model()
-file = st.file_uploader("Please upload an image", type=["jpg", "png"])
-class_names=['Angkor_wat','Buckingham_Palace','Burj_khalifa','Christ_the_Redeemer','Gateway_of_India','Niagara_Falls','Tajmahal','The_Eiffel_Tower','The_Great_Wall_of_China','The_Sydney_Opera_House']
-    
+  
 # Function for prediction
 def import_and_predict(image_data, model):
     size = (128,128)
@@ -36,6 +34,8 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
+    file = st.file_uploader("Please upload an image", type=["jpg", "png"])
+    class_names=['Angkor_wat','Buckingham_Palace','Burj_khalifa','Christ_the_Redeemer','Gateway_of_India','Niagara_Falls','Tajmahal','The_Eiffel_Tower','The_Great_Wall_of_China','The_Sydney_Opera_House']
     result=""
     if st.button("Predict"):
 #         if file is None:
