@@ -48,8 +48,8 @@ def main():
         result= class_names[np.argmax(score)]
         st.write('This is {}'.format(result))
     if st.button("About"):
-       st.text("Lets LEarn")
-       st.text("Built with Streamlit")
+       st.text("Lets Learn building a Monument image classifiier")
+       st.text("Deploying with Streamlit")
 
 if __name__=='__main__':
     main()
