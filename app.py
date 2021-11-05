@@ -1,7 +1,6 @@
 import streamlit as st
 # import tensorflow as tf
 import cv2
-import keras
 from PIL import Image, ImageOps
 import numpy as np
 import requests
