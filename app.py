@@ -2,6 +2,7 @@ import streamlit as st
 import tensorflow as tf
 import cv2
 from PIL import Image, ImageOps
+from tensorflow import keras
 import numpy as np
 from tensorflow.keras.preprocessing import image
 st.set_option('deprecation.showfileUploaderEncoding', False) # to avoid warnings while uploading files
