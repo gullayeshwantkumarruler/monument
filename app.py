@@ -80,7 +80,7 @@ def main():
             image = Image.open(i).resize((100, 100))
             st.image(image, caption='Tajmahal')
         elif result=='The_Eiffel_Tower':
-           images=["The_Eiffel_Tower/The_Eiffel_Tower (1).jpg","The_Eiffel_Tower/The_Eiffel_Tower (2).jpg","The_Eiffel_Tower/The_Eiffel_Tower (3).jpg","The_Eiffel_Tower/The_Eiffel_Tower (4).jpg"]
+          images=["The_Eiffel_Tower/The_Eiffel_Tower (1).jpg","The_Eiffel_Tower/The_Eiffel_Tower (2).jpg","The_Eiffel_Tower/The_Eiffel_Tower (3).jpg","The_Eiffel_Tower/The_Eiffel_Tower (4).jpg"]
           for i in images:
             image = Image.open(i).resize((100, 100))
             st.image(image, caption='The_Eiffel_Tower')
