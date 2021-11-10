@@ -40,7 +40,7 @@ def main():
     if st.button("Predict"):
       if file is None:
         st.write("please upload an image")
-      elif:
+      else:
         image = Image.open(file)
         st.image(image, use_column_width=True)
         predictions = import_and_predict(image,model)
