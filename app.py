@@ -38,6 +38,7 @@ def main():
     file = st.file_uploader("Please upload an image", type=["jpg", "png"])
     class_names=['Angkor_wat','Buckingham_Palace','Burj_khalifa','Christ_the_Redeemer','Gateway_of_India','Niagara_Falls','Tajmahal','The_Eiffel_Tower','The_Great_Wall_of_China','The_Sydney_Opera_House']
     result=""
+    final_images=""
     if st.button("Predict"):
       if file is None:
         st.write("please upload an image")
