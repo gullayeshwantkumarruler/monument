@@ -88,10 +88,12 @@ def main():
             elif folder_name=='The_Sydney_Opera_House/':
                 train_path_The_Sydney_Opera_House.append(folder_name+image_name)
 
+        The_Sydney_Opera_House=[]
         st.write(train_path_The_Sydney_Opera_House)
         for i in train_path_The_Sydney_Opera_House:
           image = Image.open(i).resize((100, 100))
-          st.image(image, caption='The_Sydney_Opera_House')
+          The_Sydney_Opera_House.append(image)
+        st.image(The_Sydney_Opera_House,width=400, caption='The_Sydney_Opera_House')
 #         if result=='Angkor_wat':
 #           images=["Angkor_wat/Angkor_wat (1).jpg","Angkor_wat/Angkor_wat (2).jpg","Angkor_wat/Angkor_wat (3).jpg","Angkor_wat/Angkor_wat (4).jpg"]
 #           for i in images:
