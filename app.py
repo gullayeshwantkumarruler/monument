@@ -39,6 +39,10 @@ def main():
     class_names=['Angkor_wat','Buckingham_Palace','Burj_khalifa','Christ_the_Redeemer','Gateway_of_India','Niagara_Falls','Tajmahal','The_Eiffel_Tower','The_Great_Wall_of_China','The_Sydney_Opera_House']
     result=""
     final_images=""
+    with st.sidebar:
+      st.header("Monument Classifier using VGG16")
+      st.image("vgg16.jpg")
+            
     if st.button("Predict"):
       if file is None:
         st.write("please upload an image")
@@ -133,17 +137,8 @@ def main():
         
 
 
-        with st.sidebar:
-            st.header("Monument Classifier using VGG16")
-            st.image("vgg16.jpg")
-            
 
 
-
-#             with st.form(key="grid_reset"):
-#                 n_photos = st.slider("Number of monument photos:", 4, 128, 16)
-#                 n_cols = st.number_input("Number of columns", 2, 8, 4)
-#                 st.form_submit_button(label="Reset images and layout")
 
 
 
