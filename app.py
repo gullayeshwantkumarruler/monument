@@ -133,16 +133,14 @@ def main():
         
 
 
-        with st.sidebar:
-            st.header("Configuration")
-            with st.form(key="grid_reset"):
-                n_photos = st.slider("Number of monument photos:", 4, 128, 16)
-                n_cols = st.number_input("Number of columns", 2, 8, 4)
-                st.form_submit_button(label="Reset images and layout")
+#         with st.sidebar:
+#             st.header("Configuration")
+#             with st.form(key="grid_reset"):
+#                 n_photos = st.slider("Number of monument photos:", 4, 128, 16)
+#                 n_cols = st.number_input("Number of columns", 2, 8, 4)
+#                 st.form_submit_button(label="Reset images and layout")
 
-            if st.button("About"):
-               st.text("Lets Learn building a Monument image classifiier")
-               st.text("Deploying with Streamlit")
+
 
         if result=='Angkor_wat':
             final_images =Angkor_wat
@@ -174,14 +172,16 @@ def main():
         elif result=='The_Sydney_Opera_House':
             final_images =The_Sydney_Opera_House
 
-        n_rows = 1 + len(final_images) // int(n_cols)
-        rows = [st.container() for _ in range(n_rows)]
-        cols_per_row = [r.columns(n_cols) for r in rows]
-        cols = [column for row in cols_per_row for column in row]
+#         n_rows = 1 + len(final_images) // int(n_cols)
+#         rows = [st.container() for _ in range(n_rows)]
+#         cols_per_row = [r.columns(n_cols) for r in rows]
+#         cols = [column for row in cols_per_row for column in row]
 
-        for image_index, mon_image in enumerate(final_images):
-            cols[image_index].image(mon_image)
+#         for image_index, mon_image in enumerate(final_images):
+#             cols[image_index].image(mon_image)
 
-
+    if st.button("About"):
+     st.text("Lets Learn building a Monument image classifiier")
+     st.text("Deploying with Streamlit")
 if __name__=='__main__':
     main()
