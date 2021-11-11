@@ -93,7 +93,7 @@ def main():
         for i in train_path_The_Sydney_Opera_House:
           image = Image.open(i).resize((100, 100))
           The_Sydney_Opera_House.append(image)
-        st.image(The_Sydney_Opera_House,width=400, caption='The_Sydney_Opera_House')
+        st.image(The_Sydney_Opera_House,width=400)
 #         if result=='Angkor_wat':
 #           images=["Angkor_wat/Angkor_wat (1).jpg","Angkor_wat/Angkor_wat (2).jpg","Angkor_wat/Angkor_wat (3).jpg","Angkor_wat/Angkor_wat (4).jpg"]
 #           for i in images:
