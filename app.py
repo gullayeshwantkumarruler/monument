@@ -89,6 +89,9 @@ def main():
                 train_path_The_Sydney_Opera_House.append(folder_name+image_name)
 
         st.write(train_path_The_Sydney_Opera_House)
+        for i in train_path_The_Sydney_Opera_House:
+          image = Image.open(i).resize((100, 100))
+          st.image(image, caption='The_Sydney_Opera_House')
 #         if result=='Angkor_wat':
 #           images=["Angkor_wat/Angkor_wat (1).jpg","Angkor_wat/Angkor_wat (2).jpg","Angkor_wat/Angkor_wat (3).jpg","Angkor_wat/Angkor_wat (4).jpg"]
 #           for i in images:
@@ -137,7 +140,7 @@ def main():
 #             st.image(image, caption='The_Great_Wall_of_China')
 #         elif result=='The_Sydney_Opera_House':
 #           images=["The_Sydney_Opera_House/The_Sydney_Opera_House (1).jpg","The_Sydney_Opera_House/The_Sydney_Opera_House (2).jpg","The_Sydney_Opera_House/The_Sydney_Opera_House (3).jpg","The_Sydney_Opera_House/The_Sydney_Opera_House (4).jpg"]
-#           for i in images:
+#           for i in train_path_The_Sydney_Opera_House:
 #             image = Image.open(i).resize((100, 100))
 #             st.image(image, caption='The_Sydney_Opera_House')
 
