@@ -60,31 +60,31 @@ def main():
         train_path_The_Great_Wall_of_China=[]
         train_path_The_Sydney_Opera_House=[]
         
-        for folder_name in ['/Angkor_wat/','/Buckingham_Palace/','/Burj_khalifa/','/Christ_the_Redeemer/','/Gateway_of_India/','/Niagara_Falls/','/Tajmahal/','/The_Eiffel_Tower/','/The_Great_Wall_of_China/','/The_Sydney_Opera_House/']:
+        for folder_name in ['Angkor_wat/','Buckingham_Palace/','Burj_khalifa/','Christ_the_Redeemer/','Gateway_of_India/','Niagara_Falls/','Tajmahal/','The_Eiffel_Tower/','The_Great_Wall_of_China/','The_Sydney_Opera_House/']:
     
           #Path of the folder
           images_path = os.listdir(train_dir + folder_name)
 
           for i, image_name in enumerate(images_path): 
-            if folder_name=='/Angkor_wat/':
+            if folder_name=='Angkor_wat/':
                 train_path_Angkor_wat.append(0)
-            elif folder_name=='/Buckingham_Palace/':
+            elif folder_name=='Buckingham_Palace/':
                 train_path_Buckingham_Palace.append(1)
-            elif folder_name=='/Burj_khalifa/':
+            elif folder_name=='Burj_khalifa/':
                 train_path_Burj_khalifa.append(2)
-            elif folder_name=='/Christ_the_Redeemer/':
+            elif folder_name=='Christ_the_Redeemer/':
                 train_path_Christ_the_Redeemer.append(3)
-            elif folder_name=='/Gateway_of_India/':
+            elif folder_name=='Gateway_of_India/':
                 train_path_Gateway_of_India.append(4)
-            elif folder_name=='/Niagara_Falls/':
+            elif folder_name=='Niagara_Falls/':
                 train_path_Niagara_Falls.append(5)
-            elif folder_name=='/Tajmahal/':
+            elif folder_name=='Tajmahal/':
                 train_path_Tajmahal.append(6)
-            elif folder_name=='/The_Eiffel_Tower/':
+            elif folder_name=='The_Eiffel_Tower/':
                 train_path_The_Eiffel_Tower.append(7)
-            elif folder_name=='/The_Great_Wall_of_China/':
+            elif folder_name=='The_Great_Wall_of_China/':
                 train_path_The_Great_Wall_of_China.append(8)
-            elif folder_name=='/The_Sydney_Opera_House/':
+            elif folder_name=='The_Sydney_Opera_House/':
                 train_path_The_Sydney_Opera_House.append(9)
 
         st.write(train_path_The_Sydney_Opera_House)
