@@ -48,7 +48,7 @@ def main():
         predictions = import_and_predict(image,model)
         score = tf.nn.softmax(predictions[0])
         result= class_names[np.argmax(score)]
-        st.write('This is {} with a probability of {}'.format(result,np.max(score)))
+        st.write('This is {} with a probability of {}'.format(result,score))
         st.caption("The result is trained on similar images like: ")
         
         train_path_Angkor_wat=[]
