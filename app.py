@@ -86,7 +86,7 @@ def main():
             elif folder_name=='The_Great_Wall_of_China/':
                 train_path_The_Great_Wall_of_China.append(8)
             elif folder_name=='The_Sydney_Opera_House/':
-                train_path_The_Sydney_Opera_House.append(9)
+                train_path_The_Sydney_Opera_House.append(folder_name+image_name)
 
         st.write(train_path_The_Sydney_Opera_House)
 #         if result=='Angkor_wat':
