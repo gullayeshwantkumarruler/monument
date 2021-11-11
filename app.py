@@ -172,9 +172,9 @@ def main():
         elif result=='The_Sydney_Opera_House':
             final_images =The_Sydney_Opera_House
 
-        n_rows = 1 + len(final_images) // int(n_cols)
+        n_rows = 1 + len(final_images) // int(4)
         rows = [st.container() for _ in range(n_rows)]
-        cols_per_row = [r.columns(n_cols) for r in rows]
+        cols_per_row = [r.columns(4) for r in rows]
         cols = [column for row in cols_per_row for column in row]
 
         for image_index, mon_image in enumerate(final_images):
