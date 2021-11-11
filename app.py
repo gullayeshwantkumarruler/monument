@@ -52,7 +52,8 @@ def main():
           images=["Angkor_wat/Angkor_wat (1).jpg","Angkor_wat/Angkor_wat (2).jpg","Angkor_wat/Angkor_wat (3).jpg","Angkor_wat/Angkor_wat (4).jpg"]
           for i in images:
             image = Image.open(i).resize((100, 100))
-            st.image(image,width=400, caption='Angkor_wat')
+            
+            st.image(image,caption='Angkor_wat')
         elif result=='Buckingham_Palace':
           images=["Buckingham_Palace/Buckingham_Palace (1).jpg","Buckingham_Palace/Buckingham_Palace (2).jpg","Buckingham_Palace/Buckingham_Palace (3).jpg","Buckingham_Palace/Buckingham_Palace (4).jpg"]
           for i in images:
