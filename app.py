@@ -131,6 +131,7 @@ def main():
           The_Sydney_Opera_House.append(image)
         
         if st.button("show_similar_trained_images"):
+          
           with st.sidebar:
               st.header("Configuration")
               with st.form(key="grid_reset"):
@@ -171,7 +172,7 @@ def main():
 
           elif result=='The_Sydney_Opera_House':
             final_images =The_Sydney_Opera_House
-
+            
           n_rows = 1 + len(final_images) // int(n_cols)
           rows = [st.container() for _ in range(n_rows)]
           cols_per_row = [r.columns(n_cols) for r in rows]
