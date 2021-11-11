@@ -132,54 +132,54 @@ def main():
         
        
           
-        with st.sidebar:
-            st.header("Configuration")
-            with st.form(key="grid_reset"):
-                n_photos = st.slider("Number of cat photos:", 4, 128, 16)
-                n_cols = st.number_input("Number of columns", 2, 8, 4)
-                st.form_submit_button(label="Reset images and layout")
+    with st.sidebar:
+        st.header("Configuration")
+        with st.form(key="grid_reset"):
+            n_photos = st.slider("Number of cat photos:", 4, 128, 16)
+            n_cols = st.number_input("Number of columns", 2, 8, 4)
+            st.form_submit_button(label="Reset images and layout")
 
-            if st.button("About"):
-               st.text("Lets Learn building a Monument image classifiier")
-               st.text("Deploying with Streamlit")
+        if st.button("About"):
+           st.text("Lets Learn building a Monument image classifiier")
+           st.text("Deploying with Streamlit")
 
-        if result=='Angkor_wat':
-          final_images =Angkor_wat
+    if result=='Angkor_wat':
+      final_images =Angkor_wat
 
-        elif result=='Buckingham_Palace':
-          final_images =Buckingham_Palace
+    elif result=='Buckingham_Palace':
+      final_images =Buckingham_Palace
 
-        elif result=='Burj_khalifa':
-          final_images =Burj_khalifa
+    elif result=='Burj_khalifa':
+      final_images =Burj_khalifa
 
-        elif result=='Christ_the_Redeemer':
-          final_images =Christ_the_Redeemer
+    elif result=='Christ_the_Redeemer':
+      final_images =Christ_the_Redeemer
 
-        elif result=='Gateway_of_India':
-          final_images =Gateway_of_India
+    elif result=='Gateway_of_India':
+      final_images =Gateway_of_India
 
-        elif result=='Niagara_Falls':
-          final_images =Niagara_Falls
+    elif result=='Niagara_Falls':
+      final_images =Niagara_Falls
 
-        elif result=='Tajmahal':
-          final_images =Tajmahal
+    elif result=='Tajmahal':
+      final_images =Tajmahal
 
-        elif result=='The_Eiffel_Tower':
-          final_images =The_Eiffel_Tower
+    elif result=='The_Eiffel_Tower':
+      final_images =The_Eiffel_Tower
 
-        elif result=='The_Great_Wall_of_China':
-          final_images =The_Great_Wall_of_China
+    elif result=='The_Great_Wall_of_China':
+      final_images =The_Great_Wall_of_China
 
-        elif result=='The_Sydney_Opera_House':
-          final_images =The_Sydney_Opera_House
+    elif result=='The_Sydney_Opera_House':
+      final_images =The_Sydney_Opera_House
 
-        n_rows = 1 + len(final_images) // int(n_cols)
-        rows = [st.container() for _ in range(n_rows)]
-        cols_per_row = [r.columns(n_cols) for r in rows]
-        cols = [column for row in cols_per_row for column in row]
+    n_rows = 1 + len(final_images) // int(n_cols)
+    rows = [st.container() for _ in range(n_rows)]
+    cols_per_row = [r.columns(n_cols) for r in rows]
+    cols = [column for row in cols_per_row for column in row]
 
-        for image_index, mon_image in enumerate(final_images):
-            cols[image_index].image(mon_image)
+    for image_index, mon_image in enumerate(final_images):
+        cols[image_index].image(mon_image)
 
 
           
