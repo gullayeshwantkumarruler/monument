@@ -64,7 +64,7 @@ def main():
         for folder_name in ['Angkor_wat/','Buckingham_Palace/','Burj_khalifa/','Christ_the_Redeemer/','Gateway_of_India/','Niagara_Falls/','Tajmahal/','The_Eiffel_Tower/','The_Great_Wall_of_China/','The_Sydney_Opera_House/']:
     
           #Path of the folder
-          images_path = os.listdir(train_dir + folder_name)
+          images_path = os.listdir(folder_name)
 
           for i, image_name in enumerate(images_path): 
             if folder_name=='Angkor_wat/':
