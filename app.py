@@ -68,7 +68,7 @@ def main():
 
           for i, image_name in enumerate(images_path): 
             if folder_name=='Angkor_wat/':
-                train_path_Angkor_wat.append(0)
+                train_path_Angkor_wat.append(folder_name+image_name)
             elif folder_name=='Buckingham_Palace/':
                 train_path_Buckingham_Palace.append(1)
             elif folder_name=='Burj_khalifa/':
