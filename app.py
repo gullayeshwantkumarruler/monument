@@ -89,11 +89,10 @@ def main():
                 train_path_The_Sydney_Opera_House.append(folder_name+image_name)
 
         The_Sydney_Opera_House=[]
-        st.write(train_path_The_Sydney_Opera_House)
         for i in train_path_The_Sydney_Opera_House:
           image = Image.open(i).resize((200, 200))
           The_Sydney_Opera_House.append(image)
-        st.image(The_Sydney_Opera_House)
+       
         
         
         with st.sidebar:
