@@ -26,7 +26,7 @@ def import_and_predict(image_data, model):
     img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     img_reshape = img[np.newaxis,...]
     prediction = model.predict(img_reshape)
-    sc=model.predict_proba(img_reshape)
+    sc=model.predict_on_batch(img_reshape)
     st.write(sc)
     return prediction
 def main():
