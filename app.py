@@ -50,9 +50,10 @@ def main():
         image = Image.open(file)
         st.image(image, use_column_width=True)
         predictions = import_and_predict(image,model)
-        st.write(predictions)
+        
         st.write(predictions[0])
         score = tf.nn.softmax(predictions[0])
+        st.write(score)
         result= class_names[np.argmax(predictions[0])]
         st.write('This is {} '.format(result))
         st.caption("The result is trained on similar images like: ")
