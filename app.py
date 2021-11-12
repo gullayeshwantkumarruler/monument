@@ -27,7 +27,6 @@ def import_and_predict(image_data, model):
     img_reshape = img[np.newaxis,...]
     prediction = model.predict(img_reshape)
     st.write(prediction)
-    
     return prediction
 def main():
     st.title("Monument Image Classifier")
