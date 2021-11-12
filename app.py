@@ -54,12 +54,14 @@ def main():
         result= class_names[np.argmax(predictions[0])]
 #         st.write('This is {} '.format(result))
         html_temp = f"""
-    <div style="background-color:tomato;padding:10px">
-    <h2 style="color:white;text-align:center;"> This is {result} </h2>
-    </div>
-    """
+                    <div style="background-color:tomato;padding:10px">
+                    <h2 style="color:white;text-align:center;"> This is {result} </h2>
+                    </div>
+                     """
         st.markdown(html_temp,unsafe_allow_html=True)
         st.image(image, use_column_width=True)
+      
+      
         st.caption("The result is trained on similar images like: ")
         
         train_path_Angkor_wat=[]
