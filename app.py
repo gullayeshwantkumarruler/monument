@@ -40,7 +40,7 @@ def main():
     result=""
     final_images=""
     with st.sidebar:
-      with st.expander("Please upload an image from one of these categories"):
+      with st.expander("Upload an image from one of these categories"):
         
 #       st.header("Please upload an image from one of these categories")
         st.text("1. Angkor wat")
