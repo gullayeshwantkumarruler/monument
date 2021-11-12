@@ -36,7 +36,7 @@ def main():
     """
     st.markdown(html_temp,unsafe_allow_html=True)
     file = st.file_uploader("Please upload an image", type=["jpg", "png"])
-    class_names=['Angkor_wat','Buckingham_Palace','Burj_khalifa','Christ_the_Redeemer','Gateway_of_India','Niagara_Falls','Tajmahal','The_Eiffel_Tower','The_Great_Wall_of_China','The_Sydney_Opera_House']
+    class_names=['Angkor wat','Buckingham Palace','Burj khalifa','Christ the Redeemer','Gateway of India','Niagara Falls','Tajmahal','The Eiffel Tower','The Great Wall of China','The Sydney Opera House']
     result=""
     final_images=""
     with st.sidebar:
@@ -48,17 +48,18 @@ def main():
         st.write("please upload an image")
       else:
         image = Image.open(file)
-        st.image(image, use_column_width=True)
+        
         predictions = import_and_predict(image,model)
         score = tf.nn.softmax(predictions[0])
         result= class_names[np.argmax(predictions[0])]
-        st.write('This is {} '.format(result))
+#         st.write('This is {} '.format(result))
         html_temp = f"""
     <div style="background-color:tomato;padding:10px">
-    <h2 style="color:white;text-align:center;"> {result} </h2>
+    <h2 style="color:white;text-align:center;"> This is {result} </h2>
     </div>
     """
         st.markdown(html_temp,unsafe_allow_html=True)
+        st.image(image, use_column_width=True)
         st.caption("The result is trained on similar images like: ")
         
         train_path_Angkor_wat=[]
