@@ -41,6 +41,10 @@ def main():
     final_images=""
     with st.sidebar:
       st.header("Monument Classifier using VGG16")
+      st.text("Please upload an image from one of these categories")
+      st.text("1. Angkor wat")
+      st.text("2. Buckingham Palace")
+      st.text("3. Burj khalifa")
       st.image("vgg16.jpg")
             
     if st.button("Predict"):
