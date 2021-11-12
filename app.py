@@ -53,7 +53,7 @@ def main():
         st.write(predictions)
         st.write(predictions[0])
         score = tf.nn.softmax(predictions[0])
-        result= class_names[np.argmax(score)]
+        result= class_names[np.argmax(predictions[0])]
         st.write('This is {} '.format(result))
         st.caption("The result is trained on similar images like: ")
         
