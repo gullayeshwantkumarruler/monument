@@ -40,18 +40,20 @@ def main():
     result=""
     final_images=""
     with st.sidebar:
+      with st.expander("Please upload an image from one of these categories"):
+        
+#       st.header("Please upload an image from one of these categories")
+        st.text("1. Angkor wat")
+        st.text("2. Buckingham Palace")
+        st.text("3. Burj khalifa")
+        st.text("4. Christ the Redeemer")
+        st.text("5. Gateway of India")
+        st.text("6. Niagara Falls")
+        st.text("7. Tajmahal")
+        st.text("8. The Eiffel Tower")
+        st.text("9. The Great Wall of China")
+        st.text("10. The Sydney Opera House")
       st.header("Monument Classifier using VGG16")
-      st.subheader("Please upload an image from one of these categories")
-      st.text("1. Angkor wat")
-      st.text("2. Buckingham Palace")
-      st.text("3. Burj khalifa")
-      st.text("4. Christ the Redeemer")
-      st.text("5. Gateway of India")
-      st.text("6. Niagara Falls")
-      st.text("7. Tajmahal")
-      st.text("8. The Eiffel Tower")
-      st.text("9. The Great Wall of China")
-      st.text("10. The Sydney Opera House")
       st.image("vgg16.jpg")
             
     if st.button("Predict"):
