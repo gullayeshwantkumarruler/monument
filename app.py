@@ -50,6 +50,8 @@ def main():
         image = Image.open(file)
         st.image(image, use_column_width=True)
         predictions = import_and_predict(image,model)
+        st.write(predictions)
+        st.write(predictions[0])
         score = tf.nn.softmax(predictions[0])
         result= class_names[np.argmax(score)]
         st.write('This is {} '.format(result))
