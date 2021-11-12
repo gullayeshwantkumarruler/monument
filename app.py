@@ -26,6 +26,9 @@ def import_and_predict(image_data, model):
     img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     img_reshape = img[np.newaxis,...]
     prediction = model.predict(img_reshape)
+    st.write(prediction[1])
+    st.write(prediction[0])
+    
     return prediction
 def main():
     st.title("Monument Image Classifier")
@@ -53,7 +56,7 @@ def main():
         
         st.write(predictions[0])
         score = tf.nn.softmax(predictions[0])
-        st.write(predictions[1])
+        st.write(predictions[0])
         result= class_names[np.argmax(predictions[0])]
         st.write('This is {} '.format(result))
         st.caption("The result is trained on similar images like: ")
