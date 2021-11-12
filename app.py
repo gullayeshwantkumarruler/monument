@@ -59,7 +59,7 @@ def main():
                     </div>
                      """
         st.markdown(html_temp,unsafe_allow_html=True)
-#         st.image(image, use_column_width=True)
+        st.image(image, use_column_width=True)
       
       
         st.caption("The result is trained on similar images like: ")
@@ -151,34 +151,34 @@ def main():
 
 
 
-        if result=='Angkor_wat':
+        if result=='Angkor wat':
             final_images =Angkor_wat
 
-        elif result=='Buckingham_Palace':
+        elif result=='Buckingham Palace':
             final_images =Buckingham_Palace
 
-        elif result=='Burj_khalifa':
+        elif result=='Burj khalifa':
             final_images =Burj_khalifa
 
-        elif result=='Christ_the_Redeemer':
+        elif result=='Christ the Redeemer':
             final_images =Christ_the_Redeemer
 
-        elif result=='Gateway_of_India':
+        elif result=='Gateway of India':
             final_images =Gateway_of_India
 
-        elif result=='Niagara_Falls':
+        elif result=='Niagara Falls':
             final_images =Niagara_Falls
 
         elif result=='Tajmahal':
             final_images =Tajmahal
 
-        elif result=='The_Eiffel_Tower':
+        elif result=='The Eiffel Tower':
             final_images =The_Eiffel_Tower
 
-        elif result=='The_Great_Wall_of_China':
+        elif result=='The Great Wall of China':
             final_images =The_Great_Wall_of_China
 
-        elif result=='The_Sydney_Opera_House':
+        elif result=='The Sydney Opera House':
             final_images =The_Sydney_Opera_House
 
         n_rows = 1 + len(final_images) // int(4)
