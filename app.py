@@ -59,7 +59,7 @@ def main():
                     </div>
                      """
         st.markdown(html_temp,unsafe_allow_html=True)
-        st.image(image, use_column_width=True)
+#         st.image(image, use_column_width=True)
       
       
         st.caption("The result is trained on similar images like: ")
