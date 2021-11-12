@@ -53,7 +53,7 @@ def main():
         score = tf.nn.softmax(predictions[0])
         result= class_names[np.argmax(predictions[0])]
         st.write('This is {} '.format(result))
-        html_temp = """
+        html_temp = f"""
     <div style="background-color:tomato;padding:10px">
     <h2 style="color:white;text-align:center;"> {result} </h2>
     </div>
