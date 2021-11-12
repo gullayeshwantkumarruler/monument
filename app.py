@@ -205,5 +205,6 @@ def main():
     if st.button("About"):
      st.text("This is a monument classifier that predicts the monument of the image uploaded for 10 different monuments (list provided on the left).")
      st.text("This classifier uses VGG16, a pre-trained Convolutional Neural Network architecture.")
+     st.text("This classifier has been deployed using Streamlit.")
 if __name__=='__main__':
     main()
