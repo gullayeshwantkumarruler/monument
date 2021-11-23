@@ -36,14 +36,14 @@ def main():
     """
     st.markdown(html_temp,unsafe_allow_html=True)
     file = st.file_uploader("Please upload an image", type=["jpg", "png"])
-    class_names=['Angkor Wat','Buckingham Palace','Burj Khalifa','Christ the Redeemer','Gateway of India','Niagara Falls','Taj Mahal','Eiffel Tower','Great Wall of China','Sydney Opera House']
+    class_names=['Angkor Wat','Buckingham Palace','Burj Khalifa','Christ the Redeemer','Gateway of India','Niagara Falls','Taj Mahal','The Eiffel Tower','The Great Wall of China','The Sydney Opera House']
     result=""
     final_images=""
     with st.sidebar:
       with st.expander("Upload an image of one of these monuments"):
         
 #       st.header("Please upload an image from one of these categories")
-        st.text("1. Angkor wat")
+        st.text("1. Angkor Wat")
         st.text("2. Buckingham Palace")
         st.text("3. Burj Khalifa")
         st.text("4. Christ the Redeemer")
@@ -185,13 +185,13 @@ def main():
         elif result=='Taj Mahal':
             final_images =Tajmahal
 
-        elif result=='Eiffel Tower':
+        elif result=='The Eiffel Tower':
             final_images =The_Eiffel_Tower
 
-        elif result=='Great Wall of China':
+        elif result=='The Great Wall of China':
             final_images =The_Great_Wall_of_China
 
-        elif result=='Sydney Opera House':
+        elif result=='The Sydney Opera House':
             final_images =The_Sydney_Opera_House
 
         n_rows = 1 + len(final_images) // int(4)
